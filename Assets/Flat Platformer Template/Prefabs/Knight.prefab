@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12e3d7ba8e572a34ca58a4709b394e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 114210957743276982}
+  _player: {fileID: 0}
   _offset: 0.05
 --- !u!1 &1793460428808898
 GameObject:
@@ -546,9 +546,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4110779522632870}
-  - component: {fileID: 2241254516485043662}
   - component: {fileID: 50860677075071130}
-  - component: {fileID: 114210957743276982}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Player
@@ -575,54 +573,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2241254516485043662
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955737573472398}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!50 &50860677075071130
 Rigidbody2D:
   serializedVersion: 4
@@ -644,27 +594,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &114210957743276982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955737573472398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9fb48a0013ab2b48a0364fee8450007, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WalkSpeed: 500
-  JumpForce: 600
-  _walk: {fileID: 7400000, guid: 48a9bc6d93ac6fd4d8753274e629bd83, type: 2}
-  _jump: {fileID: 7400000, guid: 7a0b4309b9f09f94e9782d825f3c327f, type: 2}
-  _Legs: {fileID: 111731745464057958}
-  _Blade: {fileID: 4236578733828576}
-  _GroundCast: {fileID: 4616291451764906}
-  cam: {fileID: 0}
-  mirror: 0
 --- !u!1 &1971403698182764
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent (typeof(UserController))]
+[RequireComponent (typeof(Hero))]
 public class UserController : MonoBehaviour{
 
-    private UserController pc;
+    private Hero pc;
     // Start is called before the first frame update
     void Start(){
-        pc = GetComponent<UserController> ();
+        pc = GetComponent<Hero> ();
         
     }
 
