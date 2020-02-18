@@ -1,12 +1,15 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-public class Hero : MonoBehaviour {
-
-    public float runSpeed = 3f;
-    public void Move(float ax){
-        Vector3 direction = transform.right * ax;
-        transform.position = Vector3.Lerp (transform.position,transform.position+direction,runSpeed*Time.deltaTime);
+namespace Assets.Flat_Platformer_Template.Scripts
+{
+    internal class Hero : Unit<Hero>
+    {
+        public Hero(int hp, float runSpeed = 10) : base(hp, runSpeed)
+        {
+        }
     }
 }
