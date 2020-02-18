@@ -10,7 +10,6 @@ public class Hero : MonoBehaviour {
     public Transform cirTarg;
     public float radCir = 0.3f;
     private Rigidbody2D rb;
-
     void Start(){
         rb = GetComponent<Rigidbody2D> ();
     }
