@@ -16,9 +16,9 @@ public class Hero : MonoBehaviour {
     }
 
     bool isGround(){
-    Collider2D[] gh = Physics2D.OverlapCircleAll (cirTarg.position);
+    Collider2D[] gh = Physics2D.OverlapCircleAll (cirTarg.position,radCir);
     int j = 0;
-    for (int i=0; i< gh.Length; i++){
+    for (int i=0; i<gh.Length; i++) {
         if(gh[i].gameObject!=gameObject)
         j++;
     }
