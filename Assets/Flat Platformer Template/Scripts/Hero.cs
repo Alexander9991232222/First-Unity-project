@@ -6,7 +6,7 @@ using UnityEngine;
 public class Hero : MonoBehaviour {
 
     public float runSpeed = 3f;
-    public float JumpForce = 5f;
+    public float jumpForce = 5f;
     private Rigidbody2D rb;
 
     void Start(){
@@ -14,7 +14,7 @@ public class Hero : MonoBehaviour {
     }
 
     public void Jump(){
-        rb.AddForce (transform.up*jumpForce, ForceMode2D.Impulse)';
+        rb.AddForce (transform.up*jumpForce, ForceMode2D.Impulse);
     }
     public void Move(float ax){
         Vector3 direction = transform.right * ax;
