@@ -15,6 +15,9 @@ public class UserController : MonoBehaviour{
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtoDown ("Jump")){
+            pc.Jump ();
+        }
         pc.Move (Input.GetAxis("Horizontal"));   
     }
 }

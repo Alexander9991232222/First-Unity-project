@@ -393,6 +393,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Knight
       objectReference: {fileID: 0}
+    - target: {fileID: 1955737573472398, guid: ed18ae643e6150e48a215de290a44235, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4110779522632870, guid: ed18ae643e6150e48a215de290a44235, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.038321
