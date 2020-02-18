@@ -7,13 +7,26 @@ public class Hero : MonoBehaviour {
 
     public float runSpeed = 3f;
     public float jumpForce = 5f;
+    public Transform cirTarg;
+    public float radCir = 0.3f;
     private Rigidbody2D rb;
 
     void Start(){
         rb = GetComponent<Rigidbody2D> ();
     }
 
+    bool isGround(){
+    Collider2D[] gh = Physics2D.OverlapCircleAll (cirTarg.position);
+    int j = 0;
+    for (int i=0; i< gh.Length; i++){
+        if(gh[i].gameObject!=gameObject)
+        j++;
+    }
+    return j > 0;
+    }
+
     public void Jump(){
+        if (isGround())
         rb.AddForce (transform.up*jumpForce, ForceMode2D.Impulse);
     }
     public void Move(float ax){
