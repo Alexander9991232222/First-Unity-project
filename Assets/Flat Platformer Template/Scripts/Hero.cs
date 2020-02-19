@@ -6,7 +6,7 @@ using UnityEngine;
 public class Hero : MonoBehaviour {
 
     public float runSpeed = 3f;
-    public float jumpForce = 5f;
+    public float jumpForce = 20f;
     public Transform cirTarg;
     public float radCir = 0.3f;
     private Rigidbody2D rb;
@@ -25,11 +25,14 @@ public class Hero : MonoBehaviour {
     }
 
     public void Jump(){
-        if (isGround())
+        if (rb.velocity == Vector2.zero){
         rb.AddForce (transform.up*jumpForce, ForceMode2D.Impulse);
+        }
     }
     public void Move(float ax){
         Vector3 direction = transform.right * ax;
         transform.position = Vector3.Lerp (transform.position,transform.position+direction,runSpeed*Time.deltaTime);
+    if( (ax>0 && transform.localScale.x<0) || (ax<0 && transform.localScale.x>0))
+    transform.localScale = new Vector3 (-transform.localScale.x,transform.localScale.y,transform.localScale.z);
     }
 }
